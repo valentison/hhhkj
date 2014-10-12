@@ -1458,6 +1458,7 @@ function in_array_case($value,$array){
 
 //成功函数 By Vanson 2014年10月12日02:57:42
 function succ($msg = '', $url){
+    header('Content-type:text/html;charset=utf-8;');
     
     if (!empty($msg)){
         $text = 'alert(\'' . $msg . '\');';
@@ -1471,6 +1472,7 @@ function succ($msg = '', $url){
 
 //错误函数 By Vanson 2014年10月12日15:36:43
 function mist($msg){
+    header('Content-type:text/html;charset=utf-8;');
     echo '<script>alert(\'' . $msg . '\');history.back()</script>';
     exit;
 }

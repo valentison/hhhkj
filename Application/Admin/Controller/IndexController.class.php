@@ -26,9 +26,11 @@ class IndexController extends AdminController {
 		$messages     = $MessageModel->get_message($page, $num);   // 获取留言内容
 		$count        = $MessageModel->get_message_count();		   // 查询满足要求的总记录数
 		$Page         = new \Think\Page($count, $num);             // 实例化分页类 传入总记录数和每页显示的记录数
+
 		$Page->setConfig('prev','上一页');
  		$Page->setConfig('next','下一页');
 		$Page->setConfig('end','最后一页');
+
 		$show = $Page->show();                          	   	   // 分页显示输出
 		$this->page = $show;                        	           // 赋值分页输出
 		$this->messages = $messages;
@@ -61,6 +63,10 @@ class IndexController extends AdminController {
 		$this->display();
 	}
 
+	/**
+	 * [introduce 网站信息]
+	 * @return [type] [description]
+	 */
 	public function introduce(){
 		if (IS_POST){
 			$data = array(
@@ -84,12 +90,42 @@ class IndexController extends AdminController {
 	}
 
 	/**
+	 * [productList 产品列表]
+	 * @return [type] [description]
+	 */
+	public function productList(){
+		$page         = I('p', 1);							       // 页码
+		$num          = 10; 								       // 显示数量
+		$ProductModel = D('Products');
+
+		$products     = $ProductModel->getProucts($page, $num);    // 获取留言内容
+		$count        = $ProductModel->getProductsCount();		   // 查询满足要求的总记录数
+		$Page         = new \Think\Page($count, $num);             // 实例化分页类 传入总记录数和每页显示的记录数
+		
+		$Page->setConfig('prev','上一页');
+ 		$Page->setConfig('next','下一页');
+		$Page->setConfig('end','最后一页');
+
+		$show = $Page->show();                          	   	   // 分页显示输出
+
+		$this->page = $show;                        	           // 赋值分页输出
+		$this->products = $products;							   // 赋值商品输出
+		$this->display();
+	}
+
+	public function delProduct(){
+		$pid = I('id');
+		D('Products')->delProduct($pid);
+		succ('删除成功', U('Admin/Index/productList'));
+	}
+
+	/**
 	 * [changePwd 更改密码]
 	 * @return [type] [description]
 	 */
 	public function changePwd(){
 		if (IS_POST){
-			$password         = md5(I('password'));			//原始密码
+			$password         = md5(I('password'));		//原始密码
 			$new_password     = I('new_password');		//新密码
 			$confirm_password = I('confirm_password');	//确认密码
 
@@ -119,6 +155,14 @@ class IndexController extends AdminController {
 		}else{
 			$this->display('pass');
 		}
+	}
+
+	/**
+	 * [changeImage 图片相关]
+	 * @return [type] [description]
+	 */
+	public function changeImage(){
+		$this->show();
 	}
 
 	/**

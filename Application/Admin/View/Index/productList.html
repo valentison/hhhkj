@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>产品列表</title>
+<link href="http://cdn.bootcss.com/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
+<link href="http://cdn.bootcss.com/bootstrap/2.3.2/css/bootstrap-responsive.min.css" rel="stylesheet">
+</head>
+<style>
+	.test    {float: right;margin-bottom:3%;}
+	.test a  {margin-left: 3px; border-radius: 15px;}
+	.current {margin-left: 3px; margin-right: 0px;border-radius: 15px}
+</style>
+<body>
+		<div class="alert">
+		  <strong>产品内容</strong>
+		</div>
+		<table class="table table-striped">
+		<tr>
+			<td>ID</td>
+			<td>产品名称</td>
+			<td>产品图片</td>
+			<td>发布时间</td>
+			<td>操作</td>
+		</tr>
+		<volist name="products" id="product">
+			<tr>
+				<td>{$product.id}</td>
+				<td>{$product.title}</td>
+				<td><img src="__PUBLIC__/Uploads/{$product.picture}" alt="{$product.title}" width="125px" height="129px"></td>
+				<td>{$product.pubtime|date='Y-m-d H:i:s', ###}</td>
+				<td>
+				<a href="javascript:void(0)" onclick="
+				if(confirm('确定要删除吗?')){
+				location.href ='{:U('Admin/Index/delProduct', array('id' => $product['id']))}';}
+				" class="btn btn-primary">删除</a>
+				</td>
+			</tr>
+		</volist>
+		</table>
+		<if condition="!empty($page)">
+			<div class="test">{$page}</div>
+		</if>
+</body>
+</html>

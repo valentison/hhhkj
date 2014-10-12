@@ -6,7 +6,7 @@ class BaseMessageModel extends Model {
 	protected $tableName  = 'message'; 
 
 	protected $fields = array(
-		'id', 'name', 'tel', 'mobile', 'qq', 'pubtime',
+		'id', 'name', 'mobile', 'qq', 'content', 'pubtime',
 		'_pk' => 'id', '_autoinc' => true
 	);
 

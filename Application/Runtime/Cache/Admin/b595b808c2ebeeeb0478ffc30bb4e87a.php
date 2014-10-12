@@ -217,8 +217,10 @@
 
             {"accessPath":"","checked":false,"delFlag":0,"parentID":1,"resourceCode":"","resourceDesc":"","resourceGrade":2,"resourceID":3,"resourceName":"产品信息","resourceOrder":0,"resourceType":""},
 
+
+            {"accessPath":"/Admin/Index/productList","checked":false,"delFlag":0,"parentID":3,"resourceCode":"","resourceDesc":"","resourceGrade":3,"resourceID":7,"resourceName":"产品列表","resourceOrder":0,"resourceType":""},
             {"accessPath":"/Admin/Index/forum","checked":false,"delFlag":0,"parentID":3,"resourceCode":"","resourceDesc":"","resourceGrade":3,"resourceID":7,"resourceName":"留言内容","resourceOrder":0,"resourceType":""},
-            {"accessPath":"loupanchart.html","checked":false,"delFlag":0,"parentID":3,"resourceCode":"","resourceDesc":"","resourceGrade":3,"resourceID":8,"resourceName":"替换图片","resourceOrder":0,"resourceType":""},
+            {"accessPath":"/Admin/Index/changeImage","checked":false,"delFlag":0,"parentID":3,"resourceCode":"","resourceDesc":"","resourceGrade":3,"resourceID":8,"resourceName":"图片相关","resourceOrder":0,"resourceType":""},
 
             {"accessPath":"","checked":false,"delFlag":0,"parentID":1,"resourceCode":"","resourceDesc":"","resourceGrade":2,"resourceID":4,"resourceName":"系统信息","resourceOrder":0,"resourceType":""},
 
@@ -267,7 +269,7 @@
 
 					<li>
 						<img alt="网站首页" src="/Public/Admin/Images/common/month.jpg">：
-						<span id="yue_fen"><a href="/" style="text-decoration:none;color: #ADADAD;line-height: 65px;">网站首页</a></span>
+						<span id="yue_fen"><a href="/" style="text-decoration:none;color: #ADADAD;line-height: 65px;" target="_blank">网站首页</a></span>
 					</li>
 <!-- 					<li>
 						<img alt="事务月份" src="/Public/Admin/Images/common/month.jpg">：

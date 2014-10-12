@@ -9,5 +9,5 @@ return $connection = array(
 	    'db_charset'      => 'utf8',
 		'URL_HTML_SUFFIX' => '',
 		'URL_ROUTER_ON'   => true, 
-		'URL_MODEL'       => 2, 
+		'URL_MODEL'       => 2
 );
