@@ -8,9 +8,9 @@
 </head>
 <body>
 	<div id="container">
+	<br>
 		<div class="alert">
-		  <button type="button" class="close" data-dismiss="alert">&times;</button>
-		  <strong>欢迎回来 ! <?php echo session('user_name');?> 您上次登录的IP为<?php echo ($user_info["last_login_ip"]); ?> 时间是 <?php echo date('Y-m-d H:i:s', $user_info['last_login_time']);?></strong>
+		  <strong>欢迎回来 ! <?php echo session('user_name');?> <?php if(!empty($last_login)): ?>您上次登录的IP为<?php echo ($last_login["login_ip"]); ?> 时间是 <?php echo date('Y-m-d H:i:s', $last_login['login_time']); endif; ?></strong>
 		</div>
 		<table class="table">
 		<tr class="warning">

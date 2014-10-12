@@ -93,11 +93,11 @@ class Page{
 
         //上一页
         $up_row  = $this->nowPage - 1;
-        $up_page = $up_row > 0 ? '<a class="prev" href="' . $this->url($up_row) . '">' . $this->config['prev'] . '</a>' : '';
+        $up_page = $up_row > 0 ? '<a class="prev label label-info" href="' . $this->url($up_row) . '">' . $this->config['prev'] . '</a>' : '';
 
         //下一页
         $down_row  = $this->nowPage + 1;
-        $down_page = ($down_row <= $this->totalPages) ? '<a class="next" href="' . $this->url($down_row) . '">' . $this->config['next'] . '</a>' : '';
+        $down_page = ($down_row <= $this->totalPages) ? '<a class="next label label-info" href="' . $this->url($down_row) . '">' . $this->config['next'] . '</a>' : '';
 
         //第一页
         $the_first = '';
@@ -124,13 +124,13 @@ class Page{
             if($page > 0 && $page != $this->nowPage){
 
                 if($page <= $this->totalPages){
-                    $link_page .= '<a class="num" href="' . $this->url($page) . '">' . $page . '</a>';
+                    $link_page .= '<a class="num label label-info" href="' . $this->url($page) . '">' . $page . '</a>';
                 }else{
                     break;
                 }
             }else{
                 if($page > 0 && $this->totalPages != 1){
-                    $link_page .= '<span class="current">' . $page . '</span>';
+                    $link_page .= '<span class="current label label-info">' . $page . '</span>';
                 }
             }
         }

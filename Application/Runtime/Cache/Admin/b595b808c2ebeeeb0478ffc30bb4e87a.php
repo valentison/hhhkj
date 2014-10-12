@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>SCT-后台系统</title>
+	<title><?php echo ($title); ?> - 后台系统</title>
 	<link href="/Public/Admin/Css/main_css.css" rel="stylesheet" type="text/css" />
 	<link href="/Public/Admin/Css/zTreeStyle.css" rel="stylesheet" type="text/css">
 	<script type="text/javascript" src="/Public/Admin/Js/jquery/jquery-1.7.1.js"></script>
@@ -215,16 +215,18 @@
 			});*/
             data = [
 
-            {"accessPath":"","checked":false,"delFlag":0,"parentID":1,"resourceCode":"","resourceDesc":"","resourceGrade":2,"resourceID":3,"resourceName":"基础数据","resourceOrder":0,"resourceType":""},
+            {"accessPath":"","checked":false,"delFlag":0,"parentID":1,"resourceCode":"","resourceDesc":"","resourceGrade":2,"resourceID":3,"resourceName":"产品信息","resourceOrder":0,"resourceType":""},
 
-            {"accessPath":"house_list.html","checked":false,"delFlag":0,"parentID":3,"resourceCode":"","resourceDesc":"","resourceGrade":3,"resourceID":7,"resourceName":"查看数据","resourceOrder":0,"resourceType":""},
+            {"accessPath":"/Admin/Index/forum","checked":false,"delFlag":0,"parentID":3,"resourceCode":"","resourceDesc":"","resourceGrade":3,"resourceID":7,"resourceName":"留言内容","resourceOrder":0,"resourceType":""},
             {"accessPath":"loupanchart.html","checked":false,"delFlag":0,"parentID":3,"resourceCode":"","resourceDesc":"","resourceGrade":3,"resourceID":8,"resourceName":"替换图片","resourceOrder":0,"resourceType":""},
 
             {"accessPath":"","checked":false,"delFlag":0,"parentID":1,"resourceCode":"","resourceDesc":"","resourceGrade":2,"resourceID":4,"resourceName":"系统信息","resourceOrder":0,"resourceType":""},
 
-            {"accessPath":"pass.html","checked":false,"delFlag":0,"parentID":4,"resourceCode":"","resourceDesc":"","resourceGrade":3,"resourceID":9,"resourceName":"网站信息","resourceOrder":0,"resourceType":""},
+            {"accessPath":"/Admin/Index/introduce","checked":false,"delFlag":0,"parentID":4,"resourceCode":"","resourceDesc":"","resourceGrade":3,"resourceID":9,"resourceName":"网站信息","resourceOrder":0,"resourceType":""},
 
-           {"accessPath":"pass.html","checked":false,"delFlag":0,"parentID":4,"resourceCode":"","resourceDesc":"","resourceGrade":3,"resourceID":9,"resourceName":"修改密码","resourceOrder":0,"resourceType":""},
+            {"accessPath":"/Admin/Index/ChangePwd","checked":false,"delFlag":0,"parentID":4,"resourceCode":"","resourceDesc":"","resourceGrade":3,"resourceID":9,"resourceName":"修改密码","resourceOrder":0,"resourceType":""},
+
+            {"accessPath":"/Admin/Index/del_runtime","checked":false,"delFlag":0,"parentID":4,"resourceCode":"","resourceDesc":"","resourceGrade":3,"resourceID":9,"resourceName":"删除缓存","resourceOrder":0,"resourceType":""},
             ];
             // 如果返回数据不为空，加载"业务模块"目录
             if(data != null){
@@ -259,12 +261,13 @@
 			<div id="top_op">
 				<ul>
 					<li>
-						<img alt="网站首页" src="/Public/Admin/Images/common/month.jpg">：
-						<span id="yue_fen"><a href="/" style="text-decoration:none;color: #ADADAD;line-height: 65px;">网站首页</a></span>
-					</li>
-					<li>
 						<img alt="当前用户" src="/Public/Admin/Images/common/user.jpg">：
 						<span>admin</span>
+					</li>
+
+					<li>
+						<img alt="网站首页" src="/Public/Admin/Images/common/month.jpg">：
+						<span id="yue_fen"><a href="/" style="text-decoration:none;color: #ADADAD;line-height: 65px;">网站首页</a></span>
 					</li>
 <!-- 					<li>
 						<img alt="事务月份" src="/Public/Admin/Images/common/month.jpg">：

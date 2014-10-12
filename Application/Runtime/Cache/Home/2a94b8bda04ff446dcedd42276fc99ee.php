@@ -1,9 +1,9 @@
 <?php if (!defined('THINK_PATH')) exit();?><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>汇海恒科科技有限公司</title>
-    <meta name="keywords" content="汇海恒科科技有限公司">
-    <meta name="description" content="汇海恒科科技有限公司">
+    <title><?php echo ($title); ?></title>
+    <meta name="keywords" content="<?php echo ($title); ?>">
+    <meta name="description" content="<?php echo ($title); ?>">
     <link href="/Public/Index/Css/bdsstyle.css" rel="stylesheet" type="text/css">
-    <link href="/Public/Index/Css/common_MD.css" rel="stylesheet" type="text/css">
+    <link href="/Public/Index/Css/common_MD.css" rel="styl   esheet" type="text/css">
     <link href="/Public/Index/Css/tags.css" rel="stylesheet" type="text/css">
     <link href="/Public/Index/Css/fenzhan.css" rel="stylesheet" type="text/css">
     <link href="/Public/Index/Css/index.css" rel="stylesheet" type="text/css">
@@ -191,16 +191,16 @@
                   
 
 <div class="relation" id="i_relation">
-     <form action="">
-     <ul>
-       <a href=""> <span class="relation-X" id="relation-X"></span></a>        
-       <h2>留言</h2>
-        <li><label for="">姓名：</label><input type="text" /></li>
-        <li><label for="">电话：</label><input type="text" /></li>
-        <li><label for="">手机：</label><input type="text" /></li>
-        <li><label for="">QQ：</label><input type="text" /></li>
-        <li class="submit-input"><input type="submit" value="提交" /></li>
-    </ul>
+     <form action="<?php echo U('Home/Index/message');?>">
+         <ul>
+           <a href=""> <span class="relation-X" id="relation-X"></span></a>        
+           <h2>留言</h2>
+            <li><label for="">姓名：</label><input type="text" name="name" /></li>
+            <li><label for="">电话：</label><input type="text" name="tel" /></li>
+            <li><label for="">手机：</label><input type="text" name="mobile" /></li>
+            <li><label for="">QQ：</label><input type="text" name="qq" /></li>
+            <li class="submit-input"><input type="submit" value="提交" /></li>
+        </ul>
     </form>
 </div>
 

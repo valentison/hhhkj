@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Forum</title>
+<link href="http://cdn.bootcss.com/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
+<link href="http://cdn.bootcss.com/bootstrap/2.3.2/css/bootstrap-responsive.min.css" rel="stylesheet">
+</head>
+<style>
+	.test    {float: right;}
+	.test a  {margin-left: 3px; border-radius: 15px;}
+	.current {margin-left: 3px; margin-right: 0px;border-radius: 15px}
+</style>
+<body>
+		<div class="alert">
+		  <strong>留言内容</strong>
+		</div>
+		<table class="table table-striped">
+		<tr>
+			<td>ID</td>
+			<td>姓名</td>
+			<td>电话</td>
+			<td>手机</td>
+			<td>QQ</td>
+			<td>留言时间</td>
+			<td>操作</td>
+		</tr>
+		<volist name="messages" id="message">
+			<tr>
+				<td>{$message.id}</td>
+				<td>{$message.name}</td>
+				<td>{$message.tel}</td>
+				<td>{$message.mobile}</td>
+				<td>{$message.qq}</td>
+				<td>{$message.pubtime|date='Y-m-d H:i:s', ###}</td>
+				<td>
+				<a href="javascript:void(0)" onclick="
+				if(confirm('确定要删除吗?')){
+				location.href ='{:U('Admin/Index/delMsg', array('id' => $message['id']))}';}
+				" class="btn btn-danger">删除</a>
+				</td>
+			</tr>
+		</volist>
+		</table>
+		<div class="alert alert-success test">{$page}</div>
+</body>
+</html>

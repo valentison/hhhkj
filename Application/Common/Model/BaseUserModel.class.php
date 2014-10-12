@@ -28,19 +28,19 @@ class BaseUserModel extends Model {
 		$data   = array();
 
 		if (empty($exists)) {										//用户名不存在
-			$data['status'] = $this::USER_NOT_EXISTS;
+			$data['status'] = self::USER_NOT_EXISTS;
 		}else{
 			$data['id'] = $exists['id'];
 			if ($password != $exists['password']){					//密码错误
-				$data['status'] =  $this::USER_PWD_ERROR;
+				$data['status'] =  self::USER_PWD_ERROR;
 			}else{
 				$temp = array(										//更新用户登录信息
-					'id'              => $data['id'],
-					'last_login_ip'   => $_SERVER['REMOTE_ADDR'],
-					'last_login_time' => time()
+					'user_id'    => $data['id'],
+					'login_ip'   => $_SERVER['REMOTE_ADDR'],
+					'login_time' => time()
 				);
-				$this->save($temp);
-				$data['status'] =  $this::SUCESS_LOGIN;
+				D('LoginLog')->add($temp);
+				$data['status'] =  self::SUCESS_LOGIN;
 			}
 		}
 
