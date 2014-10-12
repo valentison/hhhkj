@@ -1,5 +1,6 @@
 vanson
 ======
 
-just a test
-123
+Welcome!!
+I'm just a rookie!
+Here is the PHP Pratice about me!!
