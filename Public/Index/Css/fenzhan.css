@@ -1,0 +1,21 @@
+﻿body{ margin:0; padding:0; font-family:Arial,宋体; font-size:12px;}
+ul,li{ list-style:none;}
+.hot_city,.city_select{ border-bottom:1px solid #ddd; height:30px; line-height:30px;}
+.hot_city li,.city_select li{ float:left;}
+.A_fenzhan{ width:980px; margin:auto;}
+    .A_logo{ margin-bottom:10px;}
+ .gray{ font-size:12px; font-weight:bold; color:#4b4b4b;} 
+  .tohefei{ background:url(../images/more.gif) right 7px no-repeat; width:85px; margin:0 15px; font-size:14px; font-weight:bold; }
+     .tohefei a{ color:#ec3701; text-decoration:none;}
+  .city a{ color:#000; text-decoration:none; font-size:14px; font-weight:bold; margin:0 10px;}
+ .city_select{ height:58px; line-height:58px;}
+ .sel_style{ margin:0 10px; height:22px;}
+ .OK_btn{ width:78px; height:24px; background:url(../images/fz_btnbg.gif) 0 0 repeat-x; border:1px solid #950016; margin:0 5px; font-size:12px; cursor:pointer; color:#fff;}
+ .inputstyle{ width:200px; height:20px; line-height:20px; border:1px solid #ddd; color:#707070; padding-left:5px;}
+ .bf{ margin:0;}
+ .all_city li{ clear:both; padding:10px 0;}
+   .caps{ color:#000; font-weight:bold; font-size:14px; display:inline-block; width:20px; height:20px; line-height:20px; float:left;}
+   .city_list{ display:inline-block; word-wrap:break-word; width:900px;line-height:20px;}
+     .city_list a{ color:#0000ff; text-decoration:none; margin:0 10px; display:inline-block; line-height:20px; height:20px;}
+     .city_list a:hover{ color:#ec3701; text-decoration:underline;}
+     
