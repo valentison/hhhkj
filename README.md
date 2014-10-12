@@ -1,4 +1,6 @@
 vanson
 ======
 
-Welcome!!I'm rookie,and here is the PHP Pratice about me!!
+Welcome!!
+I'm just a rookie!
+Here is the PHP Pratice about me!!
