@@ -14,7 +14,7 @@
 
 /*******  产品头部设备厂介绍  *******/
 .MD {background: #FFFFFF;border:#D5D5D5 solid 1px;font-size: 12px;margin:0 auto;margin-top: 5px;padding:1px;text-align: left;width: auto;}
-.MD ul {background: #F7F7F7 url("../images/MD_ico.gif") 6px 12px no-repeat;line-height: 20px;}
+.MD ul {background: #F7F7F7 url("../Index/images/MD_ico.gif") 6px 12px no-repeat;line-height: 20px;}
 
 /****** 询价--产品页 ****/
 #bdshare {float: left;
@@ -28,7 +28,7 @@
     text-decoration: none;
 }
 #xunjia {
-    background: url("../images/xunjia.gif") no-repeat scroll 0 0 transparent;
+    background: url("../Index/images/xunjia.gif") no-repeat scroll 0 0 transparent;
     border: 0 none;
     cursor: pointer;
     float: left;
@@ -37,9 +37,9 @@
     margin-top: 5px;
     width: 112px;
 }
-#xunjia:hover{background:url("../images/xunjia_hover.gif") no-repeat scroll 0 0 transparent;}
+#xunjia:hover{background:url("../Index/images/xunjia_hover.gif") no-repeat scroll 0 0 transparent;}
 .bds_tools_32 span.bds_more {
-    background: url("../images/is_32.png?cdnversion=20130712") no-repeat scroll 0 5px transparent !important;
+    background: url("../Index/images/is_32.png?cdnversion=20130712") no-repeat scroll 0 5px transparent !important;
     height: 32px;
     padding-left: 0;
     text-indent: -100em;
@@ -56,14 +56,14 @@ span.bds_more, .bds_tools a {
     padding-top: 6px;
 }
 span.bds_more {
-    background: url("../images/is.png?cdnversion=20130712") no-repeat scroll 0 5px transparent !important;
+    background: url("../Index/images/is.png?cdnversion=20130712") no-repeat scroll 0 5px transparent !important;
 }
 .bds_more {
-    background-image: url("../images/is.png?cdnversion=20130712") !important;
+    background-image: url("../Index/images/is.png?cdnversion=20130712") !important;
     background-position: 0 4px !important;
 }
 .bds_tools_32 a {
-    background: url("../images/is_32.png?cdnversion=20130712") no-repeat scroll 0 0 transparent;
+    background: url("../Index/images/is_32.png?cdnversion=20130712") no-repeat scroll 0 0 transparent;
     cursor: pointer;
     display: block;
     float: left;
@@ -92,7 +92,7 @@ span.bds_more {
     line-height:23px;
 }
 #wytw {
-    background: url("../images/help.gif") no-repeat scroll 5px 5px #F9F9F9;
+    background: url("../Index/images/help.gif") no-repeat scroll 5px 5px #F9F9F9;
     border-top: 1px dotted #E4E4E4;
     padding-left: 40px;
     border:none;
@@ -240,7 +240,7 @@ span.bds_more {
     display: none;
 }
 #order .xunjia {
-    background: url("../images/xunjia.gif") no-repeat;
+    background: url("../Index/images/xunjia.gif") no-repeat;
     border: none;
     cursor: pointer;
     height: 32px;
@@ -248,14 +248,14 @@ span.bds_more {
     width: 112px;
 }
 #order .xunjia:hover{
-    background: url("../images/xunjia_hover.gif") no-repeat;
+    background: url("../Index/images/xunjia_hover.gif") no-repeat;
 }
 .QA_list {
     clear: both;
 	text-align:left;
 }
 .QA_t {
-    background : scroll url("../images/QA.gif") 0 0 no-repeat;
+    background : scroll url("../Index/images/QA.gif") 0 0 no-repeat;
     color: #333333;
     font-size: 12px;
     font-weight: bold;
@@ -286,11 +286,11 @@ span.bds_more {
 /**--询价成功--**/
 .Suc_infor{ height:120px;  padding-top:20px;}
 .Suc_infor ul{ margin:auto; width:400px;}
-.Suc_txt{ background:Url(../images/success.gif) 0 0 no-repeat; height:35px; padding-left:60px}
+.Suc_txt{ background:Url(../Index/images/success.gif) 0 0 no-repeat; height:35px; padding-left:60px}
 .blue{ color:#004aac; font-weight:bold; font-size:14px;}
 .blue2{ color:#004aac;}
 .red{ color:#f00;}
-.tel{ background:url(../images/37.gif) 0 0 no-repeat; padding-left:20px; padding-right:10px;}
+.tel{ background:url(../Index/images/37.gif) 0 0 no-repeat; padding-left:20px; padding-right:10px;}
 
 /*--询价详情--*/
 .FrontPicContents_show01-d1_c1 {
@@ -301,7 +301,7 @@ span.bds_more {
     width: 100%;
 }
 .xj_t {
-    background: url("../images/QA.gif") no-repeat scroll 0 13px transparent;
+    background: url("../Index/images/QA.gif") no-repeat scroll 0 13px transparent;
     border-bottom: 1px solid #CCCCCC;
     color: #333333;
     font-size: 12px;

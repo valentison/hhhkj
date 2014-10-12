@@ -5,7 +5,7 @@
 .h_two { width:690px; height:22px; padding:10px 0px 0px 39px; background:url(./news_h2.jpg) no-repeat;}
 .h_two span { float:right; font-size:12px; font-weight:normal; padding-right:10px;}
 .news  { width:709px; padding:15px 10px;}
-.news  li { line-height:36px; height:36px; border-bottom:1px dashed #A2A2A2; background:url(../images/news_ulli.jpg) no-repeat 7px center; padding:0px 0px 0px 20px;}
+.news  li { line-height:36px; height:36px; border-bottom:1px dashed #A2A2A2; background:url(../Index/images/news_ulli.jpg) no-repeat 7px center; padding:0px 0px 0px 20px;}
 .news  li  span{ float:right;}
 
 .page { width:670px; text-align:center; line-height:36px;}

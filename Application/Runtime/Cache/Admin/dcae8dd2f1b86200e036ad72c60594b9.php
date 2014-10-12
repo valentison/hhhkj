@@ -45,7 +45,7 @@
 </style>
 <body>
 	<div id="container">
-		<form action="/index.php/Admin/Index/addChk" method="post" enctype="multipart/form-data">  
+		<form action="/Admin/Index/addChk" method="post" enctype="multipart/form-data">  
     <table cellspacing="1" cellpadding="2" width="99%" align="center" border="0">  
         <tbody>  
             <tr>  

@@ -7,5 +7,7 @@ return $connection = array(
 	    'db_port'         => 3306,
 	    'db_name'         => 'hhhkj', 
 	    'db_charset'      => 'utf8',
-		'URL_HTML_SUFFIX' => ''
+		'URL_HTML_SUFFIX' => '',
+		'URL_ROUTER_ON'   => true, 
+		'URL_MODEL'       => 2, 
 );

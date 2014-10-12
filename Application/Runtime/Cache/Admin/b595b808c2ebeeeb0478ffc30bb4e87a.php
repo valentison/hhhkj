@@ -260,7 +260,7 @@
 				<ul>
 					<li>
 						<img alt="网站首页" src="/Public/Admin/Images/common/month.jpg">：
-						<span id="yue_fen"><a href="<?php echo U('Home/Index/index');?>" style="text-decoration:none;color: #ADADAD;line-height: 65px;">网站首页</a></span>
+						<span id="yue_fen"><a href="/" style="text-decoration:none;color: #ADADAD;line-height: 65px;">网站首页</a></span>
 					</li>
 					<li>
 						<img alt="当前用户" src="/Public/Admin/Images/common/user.jpg">：
@@ -346,7 +346,7 @@
 	</script>
     <!-- side menu start -->
     <div id="main">
-      	<iframe name="right" id="rightMain" src="introduce.html" frameborder="no" scrolling="auto" width="100%" height="100%" allowtransparency="true"/>
+      	<iframe name="right" id="rightMain" src="<?php echo U('Admin/Index/info');?>" frameborder="no" scrolling="auto" width="100%" height="100%" allowtransparency="true"/>
     </div>
 </body>
 </html>
