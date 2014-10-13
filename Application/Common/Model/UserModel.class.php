@@ -1,7 +1,7 @@
 <?php
 namespace Common\Model;
 use Think\Model;
-class BaseUserModel extends Model {
+class UserModel extends Model {
 	
 	const USER_NOT_EXISTS = 'user_not_exists';
 	const USER_PWD_ERROR  = 'user_pwd_error';

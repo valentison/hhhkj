@@ -1489,7 +1489,7 @@ function my_del($path) {
                     my_del($path.'/'.$file);
                 }
             }
-            if ($path != ($_SERVER['DOCUMENT_ROOT'].'/Application/Runtime/Data')){
+            if ($path != ($_SERVER['DOCUMENT_ROOT'].'/Application/Runtime/')){
                 @rmdir($path);  //这种方法不用判断文件夹是否为空,  因为不管开始时文件夹是否为空,到达这里的时候,都是空的     
             }
     }

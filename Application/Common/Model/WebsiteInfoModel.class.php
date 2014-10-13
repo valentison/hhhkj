@@ -1,7 +1,7 @@
 <?php
 namespace Common\Model;
 use Think\Model;
-class BaseWebsiteInfoModel extends Model {
+class WebsiteInfoModel extends Model {
 
 	protected $tableName  = 'website_info'; 
 

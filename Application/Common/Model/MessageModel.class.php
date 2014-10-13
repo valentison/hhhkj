@@ -1,7 +1,7 @@
 <?php
 namespace Common\Model;
 use Think\Model;
-class BaseMessageModel extends Model {
+class MessageModel extends Model {
 	
 	protected $tableName  = 'message'; 
 

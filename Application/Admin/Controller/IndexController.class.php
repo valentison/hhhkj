@@ -1,7 +1,6 @@
 <?php
 namespace Admin\Controller;
 use Think\Controller;
-use Common\Model\BaseWebsiteInfoModel;
 
 class IndexController extends AdminController {
 
@@ -150,7 +149,7 @@ class IndexController extends AdminController {
 			if ($status){
 				succ('修改成功', U('Admin/Index/changePwd'));
 			}else{
-				succ('修改失败', U('Admin/Index/changePwd'));
+				succ('密码不能相同', U('Admin/Index/changePwd'));
 			}
 
 		}else{

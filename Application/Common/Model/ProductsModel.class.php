@@ -1,7 +1,7 @@
 <?php
 namespace Common\Model;
 use Think\Model;
-class BaseProductsModel extends Model {
+class ProductsModel extends Model {
 	
 	protected $tableName  = 'products'; 
 
