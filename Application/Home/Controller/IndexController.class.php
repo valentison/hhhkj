@@ -5,7 +5,6 @@ class IndexController extends Controller {
 
     public function index(){
     	$web_info     = D('WebsiteInfo')->getWebSiteInfo(); 		// 获取网站信息
-    	print_r($web_info);
 		$ProductModel = D('Products');
 
 		$page     = I('p', 1);							            // 页码
@@ -26,7 +25,7 @@ class IndexController extends Controller {
     }
 
     /**
-     * [message 提交留言]
+     * [message 前台提交留言]
      * @return [type] [description]
      */
     public function message(){
