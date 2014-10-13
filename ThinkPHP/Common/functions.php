@@ -1501,5 +1501,5 @@ function my_del($path) {
 
 //获取网站标题
 function getTitle(){
-   return D('WebsiteInfo')->where(array('type' => 'title'))->getField('value');
+   return D('WebsiteInfo')->where(array('id' => 1))->getField('title');
 }

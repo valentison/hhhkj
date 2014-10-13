@@ -70,6 +70,7 @@ class IndexController extends AdminController {
 	public function introduce(){
 		if (IS_POST){
 			$data = array(
+				'id'		=> 1,
 				'title'     => I('title'),
 				'name'      => I('name'),
 				'manager'   => I('manager'),
@@ -83,7 +84,7 @@ class IndexController extends AdminController {
 			D('WebsiteInfo')->saveInfo($data);
 			succ('修改成功', U('Admin/Index/introduce'));
 		}else{
-			$info = D('WebsiteInfo')->getAllInfo();
+			$info = D('WebsiteInfo')->getWebSiteInfo();
 			$this->info = $info;
 			$this->display();
 		}

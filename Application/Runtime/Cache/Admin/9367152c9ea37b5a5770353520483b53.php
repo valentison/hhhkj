@@ -8,7 +8,7 @@
 </head>
 <body>
 		<div class="alert">
-		  <strong>首页幻灯片替换 (此幻灯片只允许jpg格式图片)</strong>
+		  <strong>首页幻灯片替换</strong>
 		</div>
 			<table class="table table-bordered">
 				<tr class="success">

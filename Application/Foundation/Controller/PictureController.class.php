@@ -13,12 +13,7 @@ class PictureController extends Controller {
         }
         $upload = new \Think\Upload();                              // 实例化上传类
         $upload->maxSize  = 3145728 ;                               // 设置附件上传大小
-
-        if ($type == 'advertise'){
-            $upload->exts = array('jpg', 'jpeg');                   // 设置附件上传类型
-        }else{
-            $upload->exts = array('jpg', 'gif', 'png', 'jpeg');     // 设置附件上传类型
-        }
+        $upload->exts = array('jpg', 'gif', 'png', 'jpeg');         // 设置附件上传类型
         $upload->saveName = time() . '_' . mt_rand(0, 9999);        // 设置文件上传名称
         $upload->rootPath = './Public/Uploads/';                    // 设置附件上传根目录
         $upload->savePath = '';                                     // 设置附件上传（子）目录
@@ -37,6 +32,7 @@ class PictureController extends Controller {
                 D('Products')->addProducts($data);
             }else if ($type == 'advertise'){
                 $data = array(
+                    'id'        => 1,
                     'adv_'.$num => $info['photo'.$num]['savepath'].$info['photo'.$num]['savename']
                 );
                 D('WebsiteInfo')->saveInfo($data);

@@ -4,7 +4,8 @@ use Think\Controller;
 class IndexController extends Controller {
 
     public function index(){
-    	$web_info     = D('WebsiteInfo')->getAllInfo(); 			// 获取网站信息
+    	$web_info     = D('WebsiteInfo')->getWebSiteInfo(); 		// 获取网站信息
+    	print_r($web_info);
 		$ProductModel = D('Products');
 
 		$page     = I('p', 1);							            // 页码
