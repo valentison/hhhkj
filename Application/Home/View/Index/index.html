@@ -86,7 +86,7 @@ circular: true //是否循环
                     <div class="lxwm">
                         <div style="font-family: Verdana, Arial, Helvetica, sans-serif; color: rgb(80, 80, 80); ">&nbsp;
                             <h3>{$web_infos.name}</h3>
-                            <br>业务主管：{$web_infos.2.value}<br>电&nbsp;&nbsp;&nbsp;&nbsp;话：{$web_infos.manage}
+                            <br>业务主管：{$web_infos.manager}<br>电&nbsp;&nbsp;&nbsp;&nbsp;话：{$web_infos.tel}
                         </div>
                         <div style="font-family: Verdana, Arial, Helvetica, sans-serif; color: rgb(80, 80, 80); ">
                         传&nbsp;&nbsp;&nbsp;&nbsp;真：{$web_infos.fax}
@@ -114,7 +114,7 @@ circular: true //是否循环
                     <ul class="pro_xl" style="padding-top: 5px;">
                         <volist name="products" id="product">
                             <li><a href="#">
-                                <img src="__PUBLIC__/Uploads/{$product.picture}" alt="{$product.title}"></a>
+                                <img src="{$product.save_path}{$product.save_file}" alt="{$product.title}"></a>
                                 <p>{$product.title}</p>
                             </li>
                         </volist>

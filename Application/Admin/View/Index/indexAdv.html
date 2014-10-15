@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{$title} - 首页幻灯片</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="__PUBLIC__/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<style>
+	.hidden_btn {position:relative; width: 54px; height: 34px; overflow: hidden;}
+	.hidden_btn input[type="file"] {position:absolute; top:0; left:0; width: 100%; height: 100%; opacity: 0;}
+	.mt1w99 {margin-top:1%; width:99%}
+	.w40 {width: 40px;}
+</style>
+</head>
+<body>
+<form action="{:U('Foundation/Picture/upload')}" method="POST" enctype="multipart/form-data" class="panel panel-default mt1w99">
+	<div class="panel-heading">
+		<h3 class="panel-title">首页幻灯片替换</h3>
+	</div>
+	<div class="panel-body">
+		<table class="table table-bordered">
+				<tr class="active">
+						<td class="w40">
+							<h4><span class="label label-default">1</span></h4>
+						</td>
+						<td>
+							<button type="button" class="btn btn-warning hidden_btn">浏览<input type="file" name="adv1"></button>
+						</td>
+				</tr>
+				<tr class="active">
+						<td class="w40">
+							<h4><span class="label label-default">2</span></h4>
+						</td>
+						<td>
+							<button type="button" class="btn btn-warning hidden_btn">浏览<input type="file" name="adv2"></button>
+						</td>
+				</tr>
+				<tr class="active">
+						<td class="w40">
+							<h4><span class="label label-default">3</span></h4>
+						</td>
+						<td>
+							<button type="button" class="btn btn-warning hidden_btn">浏览<input type="file" name="adv3"></button>
+						</td>
+				</tr>
+		</table>
+	</div>
+	<div class="panel-footer">
+						<input type="hidden" name="entity_type" value="index_adv_type">
+		<h3 class="panel-title clearfix"><button type="submit" class="btn btn-primary pull-left">一键替换</button></h3>
+	</div>
+</form>
+</body>
+</html>

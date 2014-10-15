@@ -5,6 +5,7 @@
 	<title>{$title} - 后台系统</title>
 	<link href="__PUBLIC__/Admin/Css/main_css.css" rel="stylesheet" type="text/css" />
 	<link href="__PUBLIC__/Admin/Css/zTreeStyle.css" rel="stylesheet" type="text/css">
+	<link href="__PUBLIC__/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 	<script type="text/javascript" src="__PUBLIC__/Admin/Js/jquery/jquery-1.7.1.js"></script>
 	<script type="text/javascript" src="__PUBLIC__/Admin/Js/zTree/jquery.ztree.core-3.2.js"></script>
 	<script type="text/javascript" src="__PUBLIC__/Admin/Js/authority/commonAll.js"></script>
@@ -195,40 +196,31 @@
 		});
 		
 		function loadMenu(resourceType, treeObj){
-			/*$.ajax({
-				type:"POST",
-				url:"${dynamicURL}/authority/modelPart.action?resourceType=" + resourceType,
-				dataType : "json",
-				success:function(data){
-					// 如果返回数据不为空，加载"业务模块"目录
-					if(data != null){
-						// 将返回的数据赋给zTree
-						$.fn.zTree.init($("#"+treeObj), setting, data);
- 						alert(treeObj);
-						zTree = $.fn.zTree.getZTreeObj(treeObj);
-						if( zTree ){
-							// 默认展开所有节点
-							zTree.expandAll(true);
-						}
-					}
-				}
-			});*/
             data = [
 
-            {"accessPath":"","checked":false,"delFlag":0,"parentID":1,"resourceCode":"","resourceDesc":"","resourceGrade":2,"resourceID":3,"resourceName":"产品信息","resourceOrder":0,"resourceType":""},
+            {"accessPath":"","checked":false,"delFlag":0,"parentID":1,"resourceCode":"","resourceDesc":"","resourceGrade":2,"resourceID":3,"resourceName":"商品信息","resourceOrder":0,"resourceType":""},
+
+            {"accessPath":"/Admin/Index/productList","checked":false,"delFlag":0,"parentID":3,"resourceCode":"","resourceDesc":"","resourceGrade":3,"resourceID":7,"resourceName":"商品列表","resourceOrder":0,"resourceType":""},
+            {"accessPath":"/Admin/Index/productUpload","checked":false,"delFlag":0,"parentID":3,"resourceCode":"","resourceDesc":"","resourceGrade":3,"resourceID":8,"resourceName":"商品上传","resourceOrder":0,"resourceType":""},
+         
+            {"accessPath":"","checked":false,"delFlag":0,"parentID":1,"resourceCode":"","resourceDesc":"","resourceGrade":2,"resourceID":4,"resourceName":"广告相关","resourceOrder":0,"resourceType":""},
+            {"accessPath":"/Admin/Index/indexAdv","checked":false,"delFlag":0,"parentID":4,"resourceCode":"","resourceDesc":"","resourceGrade":3,"resourceID":7,"resourceName":"首页幻灯片","resourceOrder":0,"resourceType":""},
 
 
-            {"accessPath":"/Admin/Index/productList","checked":false,"delFlag":0,"parentID":3,"resourceCode":"","resourceDesc":"","resourceGrade":3,"resourceID":7,"resourceName":"产品列表","resourceOrder":0,"resourceType":""},
-            {"accessPath":"/Admin/Index/forum","checked":false,"delFlag":0,"parentID":3,"resourceCode":"","resourceDesc":"","resourceGrade":3,"resourceID":7,"resourceName":"留言内容","resourceOrder":0,"resourceType":""},
-            {"accessPath":"/Admin/Index/changeImage","checked":false,"delFlag":0,"parentID":3,"resourceCode":"","resourceDesc":"","resourceGrade":3,"resourceID":8,"resourceName":"图片相关","resourceOrder":0,"resourceType":""},
+            {"accessPath":"","checked":false,"delFlag":0,"parentID":1,"resourceCode":"","resourceDesc":"","resourceGrade":2,"resourceID":5,"resourceName":"系统信息","resourceOrder":0,"resourceType":""},
 
-            {"accessPath":"","checked":false,"delFlag":0,"parentID":1,"resourceCode":"","resourceDesc":"","resourceGrade":2,"resourceID":4,"resourceName":"系统信息","resourceOrder":0,"resourceType":""},
+            {"accessPath":"/Admin/Index/introduce","checked":false,"delFlag":0,"parentID":5,"resourceCode":"","resourceDesc":"","resourceGrade":3,"resourceID":9,"resourceName":"网站信息","resourceOrder":0,"resourceType":""},
 
-            {"accessPath":"/Admin/Index/introduce","checked":false,"delFlag":0,"parentID":4,"resourceCode":"","resourceDesc":"","resourceGrade":3,"resourceID":9,"resourceName":"网站信息","resourceOrder":0,"resourceType":""},
+            {"accessPath":"/Admin/Index/forum","checked":false,"delFlag":0,"parentID":5,"resourceCode":"","resourceDesc":"","resourceGrade":3,"resourceID":7,"resourceName":"留言内容","resourceOrder":0,"resourceType":""},
 
-            {"accessPath":"/Admin/Index/ChangePwd","checked":false,"delFlag":0,"parentID":4,"resourceCode":"","resourceDesc":"","resourceGrade":3,"resourceID":9,"resourceName":"修改密码","resourceOrder":0,"resourceType":""},
+            {"accessPath":"/Admin/Index/ChangePwd","checked":false,"delFlag":0,"parentID":5,"resourceCode":"","resourceDesc":"","resourceGrade":3,"resourceID":9,"resourceName":"修改密码","resourceOrder":0,"resourceType":""},
 
-            {"accessPath":"/Admin/Index/del_runtime","checked":false,"delFlag":0,"parentID":4,"resourceCode":"","resourceDesc":"","resourceGrade":3,"resourceID":9,"resourceName":"删除缓存","resourceOrder":0,"resourceType":""},
+            {"accessPath":"/Admin/Index/del_runtime","checked":false,"delFlag":0,"parentID":5,"resourceCode":"","resourceDesc":"","resourceGrade":3,"resourceID":9,"resourceName":"删除缓存","resourceOrder":0,"resourceType":""},
+
+            {"accessPath":"","checked":false,"delFlag":0,"parentID":1,"resourceCode":"","resourceDesc":"","resourceGrade":2,"resourceID":6,"resourceName":"服务器相关","resourceOrder":0,"resourceType":""},
+
+            {"accessPath":"/Admin/Index/info","checked":false,"delFlag":0,"parentID":6,"resourceCode":"","resourceDesc":"","resourceGrade":3,"resourceID":9,"resourceName":"服务器信息","resourceOrder":0,"resourceType":""},
+
             ];
             // 如果返回数据不为空，加载"业务模块"目录
             if(data != null){

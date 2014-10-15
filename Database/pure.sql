@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:3306
--- Generation Time: Oct 13, 2014 at 10:37 AM
+-- Generation Time: Oct 15, 2014 at 11:27 AM
 -- Server version: 5.5.34
 -- PHP Version: 5.3.28
 
@@ -19,6 +19,24 @@ SET time_zone = "+00:00";
 --
 -- Database: `hhhkj`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `advertisements`
+--
+
+CREATE TABLE `advertisements` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `entity_type` varchar(20) DEFAULT NULL,
+  `type` varchar(20) DEFAULT NULL,
+  `title` varchar(50) DEFAULT NULL,
+  `content` varchar(150) DEFAULT NULL,
+  `save_path` varchar(50) DEFAULT NULL,
+  `save_file` varchar(50) DEFAULT NULL,
+  `url` varchar(150) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -59,7 +77,8 @@ CREATE TABLE `message` (
 CREATE TABLE `products` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(30) NOT NULL,
-  `picture` varchar(50) NOT NULL,
+  `save_path` varchar(50) NOT NULL,
+  `save_file` varchar(50) NOT NULL,
   `pubtime` int(10) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
@@ -105,9 +124,6 @@ CREATE TABLE `website_info` (
   `zipcode` varchar(15) DEFAULT NULL,
   `address` varchar(50) DEFAULT NULL,
   `introduce` text,
-  `adv_1` varchar(50) DEFAULT NULL,
-  `adv_2` varchar(50) DEFAULT NULL,
-  `adv_3` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 

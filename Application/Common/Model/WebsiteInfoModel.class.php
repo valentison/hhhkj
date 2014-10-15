@@ -6,7 +6,7 @@ class WebsiteInfoModel extends Model {
 	protected $tableName  = 'website_info'; 
 
 	protected $fields = array(
-		'id', 'title', 'name', 'manager', 'tel', 'fax', 'qq', 'zipcode', 'address', 'introduce', 'adv_1', 'adv_2', 'adv_3',
+		'id', 'title', 'name', 'manager', 'tel', 'fax', 'qq', 'zipcode', 'address', 'introduce',
 		'_pk' => 'id', '_autoinc' => true
 	);
 
@@ -35,3 +35,4 @@ class WebsiteInfoModel extends Model {
 		return $this->where(array('id' => 1))->find();
 	}
 }
+?>

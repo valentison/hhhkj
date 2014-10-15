@@ -2,48 +2,49 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Forum</title>
-<link href="http://cdn.bootcss.com/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
-<link href="http://cdn.bootcss.com/bootstrap/2.3.2/css/bootstrap-responsive.min.css" rel="stylesheet">
-</head>
+<title>{$title} - Forum</title>
+<link href="__PUBLIC__/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <style>
 	.test    {float: right; margin-bottom: 3%;}
 	.test a  {margin-left: 3px; border-radius: 15px;}
 	.current {margin-left: 3px; margin-right: 0px;border-radius: 15px}
 </style>
+</head>
 <body>
-		<div class="alert">
-		  <strong>留言内容</strong>
+	<div class="panel panel-default" style="margin-top:1%;width:99%">
+		<div class="panel-heading"><h3 class="panel-title">留言内容</h3></div>
+		<div class="panel-body">
+			<table class="table table-bordered">
+				<tr>
+					<td>ID</td>
+					<td>姓名</td>
+					<td>手机</td>
+					<td>QQ</td>
+					<td>留言</td>
+					<td>留言时间</td>
+					<td>操作</td>
+				</tr>
+				<volist name="messages" id="message">
+					<tr>
+						<td>{$message.id}</td>
+						<td>{$message.name}</td>
+						<td>{$message.mobile}</td>
+						<td>{$message.qq}</td>
+						<td>{$message.content}</td>
+						<td>{$message.pubtime|date='Y-m-d H:i:s', ###}</td>
+						<td>
+							<a href="javascript:void(0)" onclick="
+								if(confirm('确定要删除吗?')){
+								location.href ='{:U('Admin/Index/delMsg', array('id' => $message['id']))}';}
+							" class="btn btn-primary">删除</a>
+						</td>
+					</tr>
+				</volist>
+			</table>
 		</div>
-		<table class="table table-striped">
-		<tr>
-			<td>ID</td>
-			<td>姓名</td>
-			<td>手机</td>
-			<td>QQ</td>
-			<td>留言</td>
-			<td>留言时间</td>
-			<td>操作</td>
-		</tr>
-		<volist name="messages" id="message">
-			<tr>
-				<td>{$message.id}</td>
-				<td>{$message.name}</td>
-				<td>{$message.mobile}</td>
-				<td>{$message.qq}</td>
-				<td>{$message.content}</td>
-				<td>{$message.pubtime|date='Y-m-d H:i:s', ###}</td>
-				<td>
-				<a href="javascript:void(0)" onclick="
-				if(confirm('确定要删除吗?')){
-				location.href ='{:U('Admin/Index/delMsg', array('id' => $message['id']))}';}
-				" class="btn btn-primary">删除</a>
-				</td>
-			</tr>
-		</volist>
-		</table>
 		<if condition="!empty($page)">
-			<div class="test">{$page}</div>
+		<div class="panel-footer clearfix"><span style="float:right">{$page}</span></div>
 		</if>
+	</div>
 </body>
 </html>

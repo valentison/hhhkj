@@ -6,7 +6,7 @@ class ProductsModel extends Model {
 	protected $tableName  = 'products'; 
 
 	protected $fields = array(
-		'id', 'title', 'picture', 'pubtime',
+		'id', 'title', 'save_path', 'save_file', 'pubtime',
 		'_pk' => 'id', '_autoinc' => true
 	);
 

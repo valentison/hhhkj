@@ -1,6 +1,7 @@
 <?php
 namespace Admin\Controller;
 use Think\Controller;
+use Common\Model\AdvertisementsModel;
 
 class IndexController extends AdminController {
 
@@ -158,11 +159,15 @@ class IndexController extends AdminController {
 	}
 
 	/**
-	 * [changeImage 图片相关]
+	 * [productUpload 图片相关]
 	 * @return [type] [description]
 	 */
-	public function changeImage(){
-		$this->show();
+	public function productUpload(){
+		$this->display();
+	}
+
+	public function indexAdv(){
+		$this->display();
 	}
 
 	/**

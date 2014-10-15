@@ -1503,3 +1503,26 @@ function my_del($path) {
 function getTitle(){
    return D('WebsiteInfo')->where(array('id' => 1))->getField('title');
 }
+
+//删除文件 慎用!
+function del_picture($path, $file){
+
+    if (is_dir($path)){             //判断是否为目录
+        @unlink($path.$file);       //删除文件
+        
+        $is_empty = true;
+        //判断文件夹是否为空
+        $handle = opendir($path);
+        while ($file = readdir($handle)) {
+            if ($file != '.' || $file != '..'){
+                $is_empty = false;
+                break;
+            }
+        }
+
+        // 如果为空的话 删除文件夹
+        if ($is_empty) @rmdir($path);
+    }else{
+        return false;
+    }
+}

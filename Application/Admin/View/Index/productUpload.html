@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{$title} - 商品上传</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="__PUBLIC__/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<style>
+	.hidden_btn {position:relative; width: 54px; height: 34px; overflow: hidden;}
+	.hidden_btn input[type="file"] {position:absolute; top:0; left:0; width: 100%; height: 100%; opacity: 0;}
+	.mt1w99 {margin-top:1%; width:99%}
+	.w40 {width: 40px;}
+</style>
+</head>
+<body>
+<form action="{:U('Foundation/Picture/upload')}" method="post" enctype="multipart/form-data" class="form-horizontal panel panel-default mt1w99">
+	<div class="panel-heading">
+		<h3 class="panel-title">商品上传</h3>
+	</div>
+	<br>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">商品名称</label>
+		<div class="col-sm-5">
+			<input type="text" class="form-control" id="inputEmail3" name="title" placeholder="商品名称">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">商品图片</label>
+		<div class="col-sm-5">
+			<input type="file" name="photo">
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-sm-offset-2 col-sm-10">
+			<input type="hidden" name="entity_type" value="products">
+			<button type="submit" class="btn btn-info">上传</button>
+		</div>
+	</div>
+</form>
+</body>
+</html>
