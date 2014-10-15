@@ -5,10 +5,10 @@ use Think\Controller;
 class ProductController extends AdminController {
 	
 	/**
-	 * [productList 产品列表]
+	 * [index 产品列表]
 	 * @return [type] [description]
 	 */
-	public function productList(){
+	public function index(){
 		$page         = I('p', 1);							       // 页码
 		$num          = 10; 								       // 显示数量
 		$ProductModel = D('Products');
@@ -48,7 +48,7 @@ class ProductController extends AdminController {
 	public function delProduct(){
 		$pid = I('id');
 		D('Products')->delProduct($pid);
-		succ('删除成功', U('Admin/Product/productList'));
+		succ('删除成功', U('Admin/Product/index'));
 	}
 
 

@@ -136,14 +136,14 @@ class IndexController extends AdminController {
 	}
 
 	/**
-	 * [del_runtime 删除缓存]
+	 * [delRuntime 删除缓存]
 	 * @return [type] [description]
 	 */
-	public function del_runtime(){
+	public function delRuntime(){
 		$path = $_SERVER['DOCUMENT_ROOT'].'/Application/Runtime/';
 		//如果php文件不是ANSI,而是UTF-8模式,而且要删除的文件夹中包含汉字字符的话,调用函数前需要转码
 		//$path=iconv( 'utf-8', 'gb2312',$path );
 		my_del($path);
-		echo '删除缓存成功!';	//   <br />已清除 ',$path,' 目录下的所有文件!' 调试模式再开启查看路径
+		echo "<script>alert('删除缓存成功!');history.back()</script>";	//   <br />已清除 ',$path,' 目录下的所有文件!' 调试模式再开启查看路径
 	}
 }
