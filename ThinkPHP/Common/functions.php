@@ -1510,19 +1510,18 @@ function del_picture($path, $file){
     if (is_dir($path)){             //判断是否为目录
         @unlink($path.$file);       //删除文件
         
-        $is_empty = true;
+        $is_empty = false;
         //判断文件夹是否为空
         $handle = opendir($path);
         while ($file = readdir($handle)) {
             if ($file != '.' || $file != '..'){
-                $is_empty = false;
+                $is_empty = true;
                 break;
             }
         }
-
         // 如果为空的话 删除文件夹
         if ($is_empty) @rmdir($path);
     }else{
-        return false;
+        echo $path.'当前目录不存在';
     }
 }

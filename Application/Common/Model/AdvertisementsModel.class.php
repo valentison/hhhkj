@@ -41,14 +41,14 @@ class AdvertisementsModel extends Model {
 							'save_path'   => '/Public/Uploads/advertisements/' . $info[$key][0]['savepath'],
 							'save_file'   => $info[$key][0]['savename']
 						);
-						//判断文件是否存在
+						//判断数据库中是否已有数据
 						$exists = $this->where(array('entity_type' => $data['entity_type'], 'type' => $data['type']))->find();
 
-						//删除旧图片
 						if (!$exists['id']) {
 							$this->add($data);
 						}else{
-							del_picture($exists['save_path'], $exists['save_file']);
+							//删除旧图片
+							del_picture($_SERVER['DOCUMENT_ROOT'] . '/' . $exists['save_path'], $exists['save_file']);
 							$data['id'] = $exists['id'];
 							$this->save($data);
 						}
